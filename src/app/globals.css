@@ -3,19 +3,184 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #2C2D35;
+  --scrollbar-width: 0px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  .main-container {
+    @apply mx-auto my-0 px-4 py-0 mob:w-[375px] tab:w-[768px] tab:px-10 lap:w-[1024px] desk:w-[1440px] desk:px-[108px];
+  }
+
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .flex-between {
+    @apply flex items-center justify-between;
+  }
+
+  .absolute-center {
+    @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform;
+  }
+
+  .absolute-x-center {
+    @apply absolute left-1/2 -translate-x-1/2 transform;
+  }
+
+  .smooth-transition {
+    @apply transition duration-300 ease-linear;
+  }
+
+  .big-svg-btn {
+    @apply flex-center smooth-transition size-11 fill-primary-900 hover:fill-primary-500 focus:fill-primary-500 active:fill-primary-700 disabled:fill-primary-400 disabled:hover:fill-primary-400;
+  }
+
+  .favorites-btn-header {
+    @apply smooth-transition tab:flex-center hidden size-11 hover:fill-primary-500 focus:fill-primary-500 active:fill-primary-700;
+  }
+
+  .cart-btn-header {
+    @apply smooth-transition tab:flex-center hidden size-11 fill-none hover:stroke-primary-500 focus:stroke-primary-500 active:stroke-primary-700;
+  }
+
+  .primary-btn {
+    @apply flex-center after:smooth-transition smooth-transition before:smooth-transition relative z-[10]
+    divide-solid overflow-hidden border-[1px] border-accent-500 bg-accent-500 fill-accent-500
+  stroke-primary-100 text-primary-100 before:absolute before:inset-x-0 before:bottom-0 before:z-[9] 
+    before:translate-x-[-35%] before:border-b-[80px] before:border-r-[50px] before:border-solid before:border-transparent 
+    before:border-r-transparent before:content-[''] after:absolute after:inset-x-0 after:top-0 after:z-[9] after:translate-x-[35%] 
+    after:border-l-[50px] after:border-t-[80px] after:border-solid after:border-l-transparent after:border-t-transparent 
+    after:content-[''] hover:border-accent-500 hover:bg-transparent hover:fill-transparent hover:stroke-accent-500
+  hover:text-accent-500 hover:before:translate-x-[-100%] hover:before:border-b-accent-500 hover:after:translate-x-[100%] hover:after:border-t-accent-500
+  focus:border-accent-500 focus:bg-transparent focus:fill-transparent focus:stroke-accent-500 focus:text-accent-500 focus:before:translate-x-[-100%]
+  focus:before:border-b-accent-500 focus:after:translate-x-[100%] focus:after:border-t-accent-500 active:border-accent-400
+  active:bg-accent-400 active:stroke-primary-100 active:text-primary-100 disabled:border-accent-100
+  disabled:bg-accent-100 disabled:fill-accent-100 disabled:stroke-primary-100 disabled:text-primary-100
+    disabled:before:border-b-transparent disabled:after:border-t-transparent;
+  }
+
+  .secondary-btn {
+    @apply flex-center after:smooth-transition smooth-transition before:smooth-transition relative divide-solid overflow-hidden 
+    border-[1px] border-accent-400 bg-transparent text-accent-500 before:absolute before:inset-x-0 before:bottom-0 before:z-[-1] 
+    before:translate-x-[-100%] before:border-b-[80px] before:border-r-[50px] before:border-solid before:border-b-accent-200
+    before:border-r-transparent before:content-[''] after:absolute after:inset-x-0 after:top-0 after:z-[-1] after:translate-x-[100%] 
+    after:border-l-[50px] after:border-t-[80px] after:border-solid after:border-l-transparent after:border-t-accent-200 
+    after:content-[''] hover:border-accent-200 hover:before:translate-x-[-35%] hover:after:translate-x-[35%] focus:border-accent-200
+    focus:before:translate-x-[-35%] focus:after:translate-x-[35%] active:border-accent-400 active:bg-accent-400
+  active:text-primary-100 disabled:border-accent-300 disabled:bg-transparent disabled:text-accent-300 
+    disabled:before:border-b-transparent disabled:after:border-t-transparent;
+  }
+
+  .tertiary-btn {
+    @apply flex-center after:smooth-transition smooth-transition before:smooth-transition relative divide-solid overflow-hidden 
+    border-[1px] border-accent-100 bg-transparent text-primary-100 before:absolute before:inset-x-0 before:bottom-0 before:z-[-1]
+    before:translate-x-[-100%] before:border-b-[80px] before:border-r-[50px] before:border-solid before:border-b-primary-200 
+    before:border-r-transparent before:content-[''] after:absolute after:inset-x-0 after:top-0 after:z-[-1] after:translate-x-[100%] 
+    after:border-l-[50px] after:border-t-[80px] after:border-solid after:border-l-transparent after:border-t-primary-200 
+    after:content-[''] hover:border-primary-200 hover:text-primary-1000 hover:before:translate-x-[-35%] 
+    hover:after:translate-x-[35%] focus:border-primary-200 focus:text-primary-1000 focus:before:translate-x-[-35%] 
+    focus:after:translate-x-[35%] active:border-primary-300 active:bg-primary-300 active:text-primary-1000;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* для прибирання браузерних налаштувань  FilterDigitalValuesRange */
+/* Chrome, Edge, Opera */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/*  Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+/* для стилізації ползунка FilterRangePrice */
+/* Chrome, Edge, Opera */
+input[type='range']::-webkit-slider-thumb {
+  pointer-events: auto;
+  width: 25px;
+  height: 25px;
+  border: 0;
+  border-radius: 50%;
+  cursor: grab;
+  -webkit-appearance: none;
+  background-color: #3f418d;
+}
+
+/*  Firefox */
+input[type='range']::-moz-range-thumb {
+  pointer-events: auto;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 0;
+  cursor: grab;
+  -moz-appearance: none;
+  background-color: #3f418d;
+}
+
+/* Internet Explorer, Edge */
+input[type='range']::-ms-thumb {
+  pointer-events: auto;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: grab;
+  -webkit-appearance: none;
+  background-color: #3f418d;
+}
+
+@keyframes pulsIn {
+  0% {
+    box-shadow: inset 0 0 0 1rem #fff;
+    opacity: 1;
+  }
+  50%,
+  100% {
+    box-shadow: inset 0 0 0 0 #fff;
+    opacity: 0;
+  }
+}
+
+@keyframes pulsOut {
+  0%,
+  50% {
+    box-shadow: 0 0 0 0 #fff;
+    opacity: 0;
+  }
+  100% {
+    box-shadow: 0 0 0 1rem #fff;
+    opacity: 1;
+  }
+}
+
+.modal-container {
+  margin-right: var(--scrollbar-width);
+}
+
+/* radioButton */
+.radio-button-black {
+  appearance: none;
+  border: 1px solid #47312c;
+  width: 18.29px;
+  height: 18.29px;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  background-color: white;
+}
+
+.radio-button-black:checked::before {
+  content: '';
+  display: block;
+  width: 11.43px;
+  height: 11.43px;
+  border-radius: 50%;
+  background: #47312c;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

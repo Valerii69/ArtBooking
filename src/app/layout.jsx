@@ -1,9 +1,4 @@
-import './globals.css';
-import {
-  // montserratRegular400,
-  montserratMedium500,
-  // courgetteRegular400,
-} from './fonts/index';
+import { montserratMedium500 } from './fonts/index';
 import './globals.css';
 
 export const metadata = {
@@ -19,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${montserratMedium500.className} text-body1`}>
-      <body className="flex min-h-screen flex-col">{children}</body>
+      <body className="main-container ">{children}</body>
     </html>
   );
 }

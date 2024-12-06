@@ -1,9 +1,9 @@
 import { NavigationLink, Logo } from '@/src/app/ui/components/header';
 
 const navigationLinks = [
-  { text: 'Картини', href: '#' },
-  { text: 'Новинки', href: '#' },
-  { text: 'О нас', href: '#' },
+  { text: 'Painting', href: '#' },
+  { text: 'News', href: '#' },
+  { text: 'About us', href: '#' },
 ];
 
 export function NavigationBar() {
