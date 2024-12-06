@@ -13,13 +13,13 @@ export const metadata = {
   },
 
   //Dev
-  robots: "noindex, nofollow", //Delete this line in Prod
+  // robots: "noindex, nofollow", //Delete this line in Prod
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en"
-     className={`${montserratRegular400.className} text-body1`}
+     className={`${ montserratMedium500.className} text-body1`}
     >
       <body className="flex min-h-screen flex-col">{children}</body>
 
