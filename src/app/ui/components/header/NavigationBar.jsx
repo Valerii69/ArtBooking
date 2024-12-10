@@ -1,14 +1,16 @@
 import { NavigationLink, Logo } from '@/src/app/ui/components/header';
 
+
 const navigationLinks = [
-  { text: 'Painting', href: '#' },
-  { text: 'News', href: '#' },
-  { text: 'About us', href: '#' },
+  // { text: 'House', href: '#' },
+  { text: 'Painting', href: '/painting' },
+  { text: 'News', href: '/news' },
+  { text: 'About us', href: '/about-us' },
 ];
 
 export function NavigationBar() {
   return (
-    <nav className="flex flex-nowrap items-center justify-center overflow-hidden bg-gray-200 px-16 py-8 max-md:px-5">
+    <nav className="flex flex-nowrap items-center justify-center overflow-hidden px-16 py-8 max-md:px-5">
       <div className="flex w-full max-w-[1110px] flex-nowrap justify-between gap-5 max-md:max-w-full">
         <Logo />
         {/* <div className="my-auto flex items-start gap-10 max-md:max-w-full"> */}
