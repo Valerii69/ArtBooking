@@ -1,10 +1,9 @@
 import * as React from 'react';
 import Image from 'next/image';
 import { FooterLinks } from '@/src/app/ui/components/footer/FooterLinks';
-import { SocialIcons } from '@/src/app/ui/components/footer/SocialIcons';
+import { SocialIcons } from '@/src/app/ui/components/footer/';
 
-export default function Footer() {
-  const footerSections = [
+ const footerSections = [
     {
       title: 'Репродукции',
       links: ['Франция', 'Германия', 'Англия'],
@@ -19,8 +18,9 @@ export default function Footer() {
     },
   ];
 
+export function Footer() {
   return (
-    <div className="flex flex-col items-center justify-center overflow-hidden bg-gray-200 px-16 py-6 max-md:px-5">
+    <div className="flex flex-col items-center justify-center overflow-hidden px-16 py-6 max-md:px-5">
       <div className="w-full max-w-[1110px] max-md:max-w-full">
         <div className="flex gap-5 max-md:flex-col">
           <div className="flex w-[85%] flex-col max-md:ml-0 max-md:w-full">
@@ -29,17 +29,19 @@ export default function Footer() {
                 <div className="flex w-[28%] flex-col max-md:ml-0 max-md:w-full">
                   <div className="flex w-full flex-col max-md:mt-10">
                     <div className="flex min-h-[35px] items-center gap-2 self-start text-xl font-bold text-neutral-500">
-                      <Image
+                      {/* <Image
                         loading="lazy"
                         src="https://cdn.builder.io/api/v1/image/assets/b40a792e218b4f99b913d7201fce9b8b/19bc2c50c88e20c2b37784c44605b569f2f36fcaba0f7c59521e6dfcc1e30fd9?apiKey=b40a792e218b4f99b913d7201fce9b8b&"
                         alt="Ink House Logo"
                         className="my-auto aspect-square w-[35px] shrink-0 self-stretch object-contain"
-                      />
+                        fill
+                        style={{ objectFit: 'cover' }} // Adjust the image fit if needed
+                      /> */}
                       <div className="my-auto self-stretch">Ink. House</div>
                     </div>
                     <div className="mt-9 flex flex-col font-medium">
                       <div className="text-xl text-zinc-800">
-                        +7 (999) 543-54-54
+                        +38 (067) 000-00-00
                       </div>
                       <div className="mt-2 text-lg text-neutral-400">
                         Мастерская

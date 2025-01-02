@@ -1,34 +1,38 @@
-import * as React from 'react';
-import Image from 'next/image';
+import  React from 'react';
+// import Image from 'next/image';
+import { Facebook, Instagram, Telegram } from '@/src/app/icons/';
 
-export default function SocialIcons() {
+export function SocialIcons() {
   const socialLinks = [
     {
-      src: 'https://cdn.builder.io/api/v1/image/assets/b40a792e218b4f99b913d7201fce9b8b/1bd70eb1a39925808d957cab562738532812123a7a103f598f8c19253a3f3f60?apiKey=b40a792e218b4f99b913d7201fce9b8b&',
-      alt: 'Social media icon',
+      type: 'component',
+      Component: Facebook, // Use the imported component directly
+      alt: 'Facebook',
     },
     {
-      src: 'https://cdn.builder.io/api/v1/image/assets/b40a792e218b4f99b913d7201fce9b8b/6d6dfbae50c3d30e92d157c0cae6d2ebf9869f456b22ac85b8a8742bd412122a?apiKey=b40a792e218b4f99b913d7201fce9b8b&',
-      alt: 'Social media icon',
+      type: 'component',
+      Component: Instagram, // Use the imported component directly
+      alt: 'Instagram',
     },
     {
-      src: 'https://cdn.builder.io/api/v1/image/assets/b40a792e218b4f99b913d7201fce9b8b/5a290861df75e85e1bd23be85a2aa05dc6f228e246707605f3d711476d4009ff?apiKey=b40a792e218b4f99b913d7201fce9b8b&',
-      alt: 'Social media icon',
+      type: 'component',
+      Component: Telegram, // Use the imported component directly
+      alt: 'Telegram',
     },
   ];
 
   return (
     <div className="flex items-start gap-8">
       {socialLinks.map((link, index) => (
-        <Image
+        <div
           key={index}
-          loading="lazy"
-          src={link.src}
-          alt={link.alt}
-          className="aspect-square w-6 shrink-0 object-contain"
+          className="flex aspect-square w-6 shrink-0 items-center justify-center"
           tabIndex="0"
           role="link"
-        />
+          aria-label={link.alt}
+        >
+          <link.Component /> {/* Render the React component */}
+        </div>
       ))}
     </div>
   );

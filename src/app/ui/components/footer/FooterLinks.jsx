@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export default function FooterLinks ({ title, links }){
+export function FooterLinks ({ title, links }){
   return (
     <div className="flex flex-col whitespace-nowrap">
       <div className="flex items-start text-xl text-zinc-800">
