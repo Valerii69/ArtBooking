@@ -4,19 +4,19 @@ import { FooterLinks } from '@/src/app/ui/components/footer/FooterLinks';
 import { SocialIcons } from '@/src/app/ui/components/footer/';
 
  const footerSections = [
-    {
-      title: 'Репродукции',
-      links: ['Франция', 'Германия', 'Англия'],
-    },
-    {
-      title: 'Новинки',
-      links: ['2021', '2020'],
-    },
-    {
-      title: 'О нас',
-      links: ['Художники', 'Менеджеры'],
-    },
-  ];
+   {
+     title: 'Paintings',
+     links: ['Ukraine', 'Germany', 'England'],
+   },
+   {
+     title: 'New paintings',
+     links: ['2021', '2020'],
+   },
+   {
+     title: 'About us',
+     links: ['Artists', 'Managers'],
+   },
+ ];
 
 export function Footer() {
   return (
@@ -44,7 +44,7 @@ export function Footer() {
                         +38 (067) 000-00-00
                       </div>
                       <div className="mt-2 text-lg text-neutral-400">
-                        Мастерская
+                        Workshop
                       </div>
                     </div>
                   </div>

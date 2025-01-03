@@ -4,7 +4,7 @@ import Abstrakt from'@/src/app/images/Abstrakt.png';
 
 export function HeroImage() {
   return (
-    <div className="flex w-140px h-140px  max-md:ml-0 ">
+    <div className="flex max-md:ml-0 ">
       <Image
         loading="lazy"
         src={Abstrakt}
