@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Image from 'next/image';
+// import Image from 'next/image';
 import { FooterLinks } from '@/src/app/ui/components/footer/FooterLinks';
 import { SocialIcons } from '@/src/app/ui/components/footer/';
 
