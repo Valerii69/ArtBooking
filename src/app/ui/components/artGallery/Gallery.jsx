@@ -6,7 +6,7 @@ import {artGalleryData} from '@/src/app/ui/data/artGalleryData';
 export function Gallery() {
   return (
     <div className="main-container">
-      <div className="flex flex-wrap items-start gap-8 max-md:max-w-full">
+      <div className="flex flex-wrap justify-between items-center gap-10 w-full mb-4 ">
         {artGalleryData.map((item, index) => (
           <ArtCard
             key={index}

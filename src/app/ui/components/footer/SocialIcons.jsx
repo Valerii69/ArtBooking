@@ -1,5 +1,4 @@
-import  React from 'react';
-// import Image from 'next/image';
+
 import { Facebook, Instagram, Telegram } from '@/src/app/icons/';
 
 export function SocialIcons() {
