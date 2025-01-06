@@ -21,7 +21,7 @@ export  const artGalleryData = [
     artist: 'Francois Dupont',
     title: 'Procedure',
     medium: 'Color lithography (40x60)',
-    price: '20,000',
+    price: '20 000',
     src: wine,
   },
     {
@@ -42,7 +42,7 @@ export  const artGalleryData = [
     artist: 'Francois Dupont',
     title: 'Procedures',
     medium: 'Color lithography (40x60)',
-    price: '20,000',
+    price: '20 000',
     src: wine,
   },
 ];
