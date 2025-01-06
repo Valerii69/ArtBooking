@@ -1,24 +1,66 @@
+'use client';
+
+
+
+import { useState } from 'react';
+import { HeroModal } from '@/src/app/ui/components/modals/heroModal/HeroModal';
 import Image from 'next/image';
 
-export function ArtCard ({ artist, title, medium, price, src }) {
+export function ArtCard({ artist, title, medium, price, src }) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentImage, setCurrentImage] = useState(null);
+
+  const openModal = imageSrc => {
+    setCurrentImage(imageSrc); // Устанавливаем текущее изображение
+    setIsModalOpen(true); // Открываем модальное окно
+  };
+
   return (
     <div className="flex w-[370px] min-w-[240px] flex-col items-start overflow-hidden bg-gray-200 px-5 py-6">
+      {/* Изображение */}
       <Image
         loading="lazy"
         src={src}
         alt={`Artwork ${title} by ${artist}`}
-        className="aspect-[0.90] w-full self-stretch object-contain"
+        className="aspect-[0.90] w-full cursor-pointer self-stretch object-contain"
+        width={370} // Укажите ширину
+        height={370} // Укажите высоту
+        onClick={() => openModal(src)} // Открываем модальное окно с изображением
       />
+
+      {/* Информация об арте */}
       <div className="mt-5 text-lg text-neutral-400">{artist}</div>
       <div className="mt-2.5 text-3xl">{title}</div>
       <div className="mt-2 text-lg">{medium}</div>
-      <div className="mt-8 text-2xl text-neutral-500"> ₴ {price} </div>
+      <div className="mt-8 text-2xl text-neutral-500">₴ {price}</div>
+
+      {/* Кнопка открытия модального окна */}
       <button
         className="mt-5 min-h-[65px] gap-1.5 self-stretch border border-solid border-neutral-500 px-16 py-5 text-xl text-neutral-500 max-md:px-5"
-        aria-label={`Add ${title} to cart`}
+        aria-label={`View ${title} in modal`}
+        onClick={() => openModal(src)}
       >
-        Bay
+        View in Modal
       </button>
+
+      {/* Модальное окно */}
+      <HeroModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        {currentImage && (
+          <Image
+            src={currentImage}
+            alt="Selected artwork"
+            className="h-auto w-full rounded-lg"
+            width={1000}
+            height={1000}
+          />
+        )}
+        <button
+          onClick={() => setIsModalOpen(false)}
+          className="bg-red hover:bg-red-600 rounded-lg px-4 py-2 my-10 text-white"
+        >
+          Закрыть
+        </button>
+      </HeroModal>
     </div>
   );
-};
+}
