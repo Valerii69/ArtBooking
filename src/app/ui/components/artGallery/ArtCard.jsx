@@ -1,7 +1,5 @@
 'use client';
 
-
-
 import { useState } from 'react';
 import { HeroModal } from '@/src/app/ui/components/modals/heroModal/HeroModal';
 import Image from 'next/image';
@@ -22,7 +20,7 @@ export function ArtCard({ artist, title, medium, price, src }) {
         loading="lazy"
         src={src}
         alt={`Artwork ${title} by ${artist}`}
-        className="aspect-[0.90] w-full cursor-pointer self-stretch object-contain"
+        className="hover:z-100 aspect-[1] w-full cursor-pointer self-stretch object-contain transition-transform duration-300 hover:scale-110"
         width={370} // Укажите ширину
         height={370} // Укажите высоту
         onClick={() => openModal(src)} // Открываем модальное окно с изображением
@@ -56,7 +54,7 @@ export function ArtCard({ artist, title, medium, price, src }) {
         )}
         <button
           onClick={() => setIsModalOpen(false)}
-          className="bg-red hover:bg-red-600 rounded-lg px-4 py-2 my-10 text-white"
+          className="hover:bg-red-600 my-10 rounded-lg bg-red px-4 py-2 text-white"
         >
           Закрыть
         </button>

@@ -2,7 +2,7 @@ import buba from '@/src/app/images/buba.jpeg';
 import baroque from '@/src/app/images/baroque.png';
 import wine from '@/src/app/images/wine.png';
 
-export  const artGalleryData = [
+export const artGalleryData = [
   {
     artist: 'Marcel Rousseau',
     title: 'Hunting of Cupid',
@@ -24,7 +24,7 @@ export  const artGalleryData = [
     price: '20 000',
     src: wine,
   },
-    {
+  {
     artist: 'Marcel Rousseau',
     title: 'Hunting of Cupid',
     medium: 'Oil on canvas (50x80)',

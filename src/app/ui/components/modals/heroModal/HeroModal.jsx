@@ -1,6 +1,3 @@
-// import { useToggle } from '@/src/hooks/useToggle';
-
-
 export function HeroModal({ isOpen, onClose, children }) {
   if (!isOpen) return null;
 
@@ -10,7 +7,7 @@ export function HeroModal({ isOpen, onClose, children }) {
       onClick={onClose}
     >
       <div
-        className="relative w-960 rounded-lg bg-white p-10"
+        className="w-960 relative rounded-lg bg-white p-10"
         onClick={e => e.stopPropagation()}
       >
         <button
@@ -24,5 +21,3 @@ export function HeroModal({ isOpen, onClose, children }) {
     </div>
   );
 }
-
-
