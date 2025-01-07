@@ -34,7 +34,7 @@ export function ArtCard({ artist, title, medium, price, src }) {
 
       {/* Кнопка открытия модального окна */}
       <button
-        className="mt-5 min-h-[65px] gap-1.5 self-stretch border border-solid border-neutral-500 px-16 py-5 text-xl text-neutral-500 max-md:px-5"
+        className="mt-5 min-h-[65px] gap-1.5 self-stretch border border-solid border-neutral-500 px-16 py-5 text-xl text-neutral-500 transition-all duration-300 ease-in-out hover:scale-105 hover:bg-neutral-500 hover:text-white hover:shadow-lg max-md:px-5"
         aria-label={`View ${title} in modal`}
         onClick={() => openModal(src)}
       >
@@ -56,7 +56,7 @@ export function ArtCard({ artist, title, medium, price, src }) {
           onClick={() => setIsModalOpen(false)}
           className="hover:bg-red-600 my-10 rounded-lg bg-red px-4 py-2 text-white"
         >
-          Закрыть
+          Close
         </button>
       </HeroModal>
     </div>
