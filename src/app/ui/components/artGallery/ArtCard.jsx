@@ -9,8 +9,8 @@ export function ArtCard({ artist, title, medium, price, src }) {
   const [currentImage, setCurrentImage] = useState(null);
 
   const openModal = imageSrc => {
-    setCurrentImage(imageSrc); // Устанавливаем текущее изображение
-    setIsModalOpen(true); // Открываем модальное окно
+    setCurrentImage(imageSrc); //поточне зображення
+    setIsModalOpen(true); // модалка
   };
 
   return (
@@ -21,9 +21,9 @@ export function ArtCard({ artist, title, medium, price, src }) {
         src={src}
         alt={`Artwork ${title} by ${artist}`}
         className="hover:z-100 aspect-[1] w-full cursor-pointer self-stretch object-contain transition-transform duration-300 hover:scale-110"
-        width={370} // Укажите ширину
-        height={370} // Укажите высоту
-        onClick={() => openModal(src)} // Открываем модальное окно с изображением
+        width={370} 
+        height={370} 
+        onClick={() => openModal(src)} 
       />
 
       {/* Информация об арте */}
