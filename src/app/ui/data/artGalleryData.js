@@ -1,12 +1,12 @@
-import Buba from '@/src/app/images/Buba.jpeg';
-import Baroque from '@/src/app/images/Baroque.png';
-import Wine from '@/src/app/images/Wine.png';
-import Athena from '@/src/app/images/Athena.png';
-import Twist from '@/src/app/images/Twist.png';
-import Budd from '@/src/app/images/Budd.png';
-import Cubist from '@/src/app/images/Cubist.png';
-import Dubz from '@/src/app/images/Dubz.jpeg';
-import Hart from '@/src/app/images/Hart.png';
+import Buba from '@/src/app/public/Buba.jpeg';
+import Baroque from '@/src/app/public/Baroque.png';
+import Wine from '@/src/app/public/Wine.png';
+import Athena from '@/src/app/public/Athena.png';
+import Twist from '@/src/app/public/Twist.png';
+import Budd from '@/src/app/public/Budd.png';
+import Cubist from '@/src/app/public/Cubist.png';
+import Dubz from '@/src/app/public/Dubz.jpeg';
+import Hart from '@/src/app/public/Hart.png';
 
 export const artGalleryData = [
   {

@@ -18,7 +18,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${montserratMedium500.className} text-body1`}>
-      <body className="flex min-h-screen flex-col">
+      <body className="bg-body-gradient1 flex min-h-screen flex-col">
         <header className="">{/* <NavigationBar /> */}</header>
 
         <main className="main-container">{children}</main>

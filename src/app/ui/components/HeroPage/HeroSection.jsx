@@ -6,7 +6,9 @@ import { NavigationBar } from '@/src/app/ui/components/header/';
 
 export function HeroSection() {
   return (
-    <div className="main-container bg-custom-image bg-cover bg-center">
+    <div
+      className="main-container bg-custom-image bg-cover bg-center"
+    >
       <NavigationBar />
       <div className="my-[10px] flex justify-between gap-[10px]">
         <HeroImage />

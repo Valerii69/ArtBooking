@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Image from 'next/image';
-import Abstrakt from'@/src/app/images/Abstrakt.png';
+import Abstrakt from'@/src/app/public/Abstrakt.png';
 
 export function HeroImage() {
   return (
