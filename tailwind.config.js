@@ -28,7 +28,9 @@ module.exports = {
         red: '#E0372C',
         grey: '#86928B',
       },
-
+      backgroundImage: {
+        'custom-image': "url('./public/BgDesk.jpg')",
+      },
       //td - Tablet and Desktop
       fontSize: {
         'large-title-td': [

@@ -9,7 +9,9 @@ export function HeroImage() {
         loading="lazy"
         src={Abstrakt}
         alt="Ink House art collection showcase"
-        // fill
+        width={400}
+        height={400}
+
       />
     </div>
   );
