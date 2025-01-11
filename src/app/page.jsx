@@ -4,12 +4,12 @@ import { Gallery } from './ui/components/artGallery/';
 export default function HomePage() {
   return (
     <>
-      <main className="flex flex-col items-center gap-8">
-        <div className="flex flex-col items-center gap-4 bg-purple-50">
+      <div className="flex flex-col items-center gap-8">
+        <div className="flex flex-col items-center gap-4 bg-purple-50 top-8">
           <HeroSection />
           <Gallery />
         </div>
-      </main>
+      </div>
     </>
   );
 }

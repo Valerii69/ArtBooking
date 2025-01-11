@@ -9,8 +9,8 @@ const navigationLinks = [
 
 export function NavigationBar() {
   return (
-    <nav className="flex flex-nowrap items-center justify-center overflow-hidden px-16 py-8 max-md:px-5">
-      <div className="flex w-full max-w-[700px] flex-nowrap items-center justify-between gap-5 rounded-full border bg-black px-5 py-1 text-slate-100 max-md:max-w-full">
+    <nav className=" mb-0 flex flex-nowrap items-center justify-center overflow-hidden">
+      <div className="flex w-full max-w-[700px] flex-nowrap items-center justify-between gap-5 rounded-full bg-[#1F2124] px-5 py-1 text-slate-100 max-md:max-w-full">
         <Logo />
         {/* <div className="my-auto flex items-start gap-10 max-md:max-w-full"> */}
         {navigationLinks.map((link, index) => (
