@@ -23,8 +23,8 @@ export default function RootLayout({ children }) {
           {<NavigationBar />}
         </header>
 
-        <main className="mt-0">{children}</main>
-        <footer className="bg-gray-200">
+        <main className="mt-0 flex flex-col ">{children}</main>
+        <footer className="bg-gray-200 ">
           <Footer className="" />
         </footer>
       </body>
