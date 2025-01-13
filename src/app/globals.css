@@ -94,15 +94,56 @@
    /* Тень для визуального эффекта */
 }
 
-/* styles/globals.css або інший файл стилів */
-.swiper-pagination-bullet {
-  width: 20px; /* Змінює ширину точки */
-  height: 20px; /* Змінює висоту точки */
-  background-color: red; /* Колір точки */
-}
+/* swiper*/
+/* .swiper-pagination-bullet { */
+  /* Змінює ширину точки */
+  /* width: 20px;  */
+  /* Змінює висоту точки */
+  /* height: 20px;  */
+  /* Колір точки */
+  /* background-color: red;  */
+/* } */
 
-.swiper-pagination-bullet-active {
-  background-color: #007bff; /* Колір активної точки */
+/* .swiper-pagination-bullet-active {
+  /* Колір активної точки *
+  /background-color: #007bff; 
+}
+ */
+.tremor {
+  /* Анімація кожні 5 секунд */
+  /* animation: rotateImage 5s infinite;  */
+  /* Поворот навколо центру */
+  /* transform-origin: center;  */
+     animation: 10s tremor ease-out infinite;    
+}
+@keyframes tremor {
+    0%, 25% {
+        left: -1px;
+        top:-1px;
+        -webkit-transform: rotate(-4%);
+        transform: rotate(-4deg);
+        
+    }
+  25%, 50% {
+        left: 1px;
+        top:1px;
+        -webkit-transform: rotate(4%);
+        transform: rotate(4deg);
+        
+    }
+
+    50%, 75% {
+        left: -1px;
+        top: -1px;
+        -webkit-transform: rotate(-4%);
+     transform: rotate(-4deg);
+    }
+      75%, 100% {
+        left: 1px;
+        top: 1px;
+        -webkit-transform: rotate(4%);
+     transform: rotate(4deg);
+    }
 }
 
 

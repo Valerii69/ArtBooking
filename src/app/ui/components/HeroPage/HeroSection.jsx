@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { HeroImage } from './HeroImage';
-import { HeroContent } from './HeroContent';
+import { HeroImage } from '@/src/app/ui/components/heroPage/HeroImage';
+import { HeroContent } from '@/src/app/ui/components/heroPage/HeroContent';
 import {SwiperComponent} from '@/src/app/ui/components/SwiperComponent';
 
 export function HeroSection() {
@@ -10,7 +10,7 @@ export function HeroSection() {
         <HeroImage />
         <HeroContent />
       </div>
-      <div className='h-[500px]  flex items-center justify-center '>
+      <div className='h-[400px]  flex items-center justify-center'>
         <SwiperComponent />
       </div>
     </div>

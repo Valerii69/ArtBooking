@@ -1,4 +1,4 @@
-export function Star() {
+export default function Star() {
   return (
     <svg width="35" height="35" viewBox="0 0 35 35" fill="none">
       <path

@@ -1,7 +1,6 @@
 import { NavigationLink, Logo } from '@/src/app/ui/components/header';
 
 const navigationLinks = [
-  // { text: 'House', href: '#' },
   { text: 'Painting', href: '/painting' },
   { text: 'News', href: '/news' },
   { text: 'About us', href: '/about-us' },

@@ -3,10 +3,8 @@ export function Telegram() {
   return (
     <svg
       viewBox="0 0 256 256"
-      xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
-    //   preserveAspectRatio="xMidYMid"
 
     >
       <defs>
@@ -16,7 +14,7 @@ export function Telegram() {
         </linearGradient>
       </defs>
       <path
-        fill="url(#a)"
+
         d="M128 0C94.06 0 61.48 13.494 37.5 37.49A128.038 128.038 0 0 0 0 128c0 33.934 13.5 66.514 37.5 90.51C61.48 242.506 94.06 256 128 256s66.52-13.494 90.5-37.49c24-23.996 37.5-56.576 37.5-90.51 0-33.934-13.5-66.514-37.5-90.51C194.52 13.494 161.94 0 128 0Z"
       />
       <path

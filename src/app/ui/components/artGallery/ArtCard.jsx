@@ -21,18 +21,18 @@ export function ArtCard({ artist, title, medium, price, src }) {
         src={src}
         alt={`Artwork ${title} by ${artist}`}
         className="hover:z-100 aspect-[1] w-full cursor-pointer self-stretch object-contain transition-transform duration-300 hover:scale-110"
-        width={370} 
-        height={370} 
-        onClick={() => openModal(src)} 
+        width={370}
+        height={370}
+        onClick={() => openModal(src)}
       />
 
-      {/* Информация об арте */}
+      {/* інформація про картину  */}
       <div className="mt-5 text-lg text-neutral-400">{artist}</div>
       <div className="mt-2.5 text-3xl">{title}</div>
       <div className="mt-2 text-lg">{medium}</div>
       <div className="mt-8 text-2xl text-neutral-500">₴ {price}</div>
 
-      {/* Кнопка открытия модального окна */}
+      {/* Кнопка відкриття модалки */}
       <button
         className="mt-5 min-h-[65px] gap-1.5 self-stretch border border-solid border-neutral-500 px-16 py-5 text-xl text-neutral-500 transition-all duration-300 ease-in-out hover:scale-105 hover:bg-neutral-500 hover:text-white hover:shadow-lg max-md:px-5"
         aria-label={`View ${title} in modal`}
@@ -50,6 +50,7 @@ export function ArtCard({ artist, title, medium, price, src }) {
             className="h-auto w-full rounded-lg"
             width={1000}
             height={1000}
+            loading="lazy"
           />
         )}
         <button
