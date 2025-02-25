@@ -29,9 +29,9 @@ module.exports = {
         grey: '#86928B',
       },
       backgroundImage: {
-        'custom-image': "url('./public/BgDesk.jpg')",
-        'body-gradient1': 'linear-gradient(180deg, #FDE3D7 0%, #B4BEC9 75%)',
-        'body-gradient2': 'linear-gradient(180deg, #B4BEC9 0%, #FDE3D7) 75%)',
+        // 'custom-image': "url('./public/BgDesk.jpg')",
+        // 'body-gradient1': 'linear-gradient(180deg, #FDE3D7 0%, #B4BEC9 75%)',
+        // 'body-gradient2': 'linear-gradient(180deg, #B4BEC9 0%, #FDE3D7) 75%)',
       },
       //td - Tablet and Desktop
       fontSize: {

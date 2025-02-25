@@ -1,4 +1,4 @@
-import { Star } from '@/src/app/icons/star';
+import { Star } from '@/src/app/icons/Star/';
 import Link from 'next/link';
 
 export function Logo() {

@@ -34,8 +34,9 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <body className="flex min-h-screen flex-col bg-custom-image">
+             <NavigationBar />
         <header className="main-container fixed top-0 mt-5 w-full items-center justify-center">
-          <NavigationBar />
+     
         </header>
         <main className="mt-0 flex flex-col">{children}</main>
         <footer className="bg-gray-200">
